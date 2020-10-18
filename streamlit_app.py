@@ -49,10 +49,8 @@ if img:
         species = cat['species'][cat.index[0]]
         type1 = cat['type1'][cat.index[0]]
         class1 = cat['class'][cat.index[0]]
-        st.write(species, type1, class1)
         
-        st.write(cat.iloc[cat['type1'].index[0]])
-        moves = df_[df_['type']==cat['type1'][0]]
+        moves = df_[df_['type']==type1]
         
         rand = random.randrange(0, len(moves))
         move = moves.iloc[rand]['move']
