@@ -34,7 +34,8 @@ out = model(img.unsqueeze(0))
 pred = targets.target[torch.max(out, 1)[1].item()]
 
 st.image(pil_img.resize((224, 224)), caption=pred)
-if pred in df['Name'].values:
+
+if pred in df[' Name'].values:
     st.text(df[df[' Name']==pred])
 #st.text(pred)
 
