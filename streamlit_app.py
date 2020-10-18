@@ -11,7 +11,7 @@ from utils import targets
 import streamlit as st
 from gtts import gTTS
 import os
-from IPython.display import *
+from IPython.display import Audio
 
 df = pd.read_csv('utils/df.csv')
 
