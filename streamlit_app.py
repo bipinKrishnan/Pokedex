@@ -48,7 +48,7 @@ if pred in df[' Name'].values:
     #audio = open('hello.ogg', 'rb')
     #audio_bytes = audio.read()
     #st.audio(audio_bytes, format='audio/ogg', start_time=0)
-    st.wrie(Audio('hello.mp3', autoplay=True))
+    st.write(Audio('hello.mp3', autoplay=True))
     os.remove('hello.mp3')
             
 else:
