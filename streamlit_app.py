@@ -46,9 +46,9 @@ if img:
 
     if pred in df[' Name'].values:
         cat = df[df['species']==pred]
-        species = cat['species][cat['species'].index[0]]
-        type1 = cat['type1'][cat['type1'].index[0]]
-        class1 = cat['class'][cat['class'].index[0]]
+        species = cat['species].index[0]
+        type1 = cat['type1'].index[0]
+        class1 = cat['class'].index[0]
         
         moves = df_[df['type']==type1]
         rand = random.randrange(0, len(moves))
