@@ -51,6 +51,7 @@ if pred in df[' Name'].values:
     #st.audio(audio_bytes, format='audio/ogg', autoplay=True)
     #display(Audio('hello.mp3', autoplay=True))
     
+    mymidia_placeholder = st.empty()
     mymidia_str = "data:audio/ogg;base64,%s"%(base64.b64encode(audio_bytes).decode())
     mymidia_html = """
                 <audio autoplay class="stAudio">
