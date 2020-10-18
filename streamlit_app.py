@@ -12,7 +12,7 @@ import streamlit as st
 
 df = pd.read_csv('utils/df.csv')
 st.write(df.head())
-st.write(df['Type1'])
+st.write(df.getloc(['Type1']))
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
