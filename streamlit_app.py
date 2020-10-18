@@ -46,7 +46,7 @@ if pred in df[' Name'].values:
     tts.save('hello.ogg')
     audio = open('hello.ogg', 'rb')
     audio_bytes = audio.read()
-    st.audio(audio_bytes, format='audio/ogg', autoplay=True)
+    st.audio(audio_bytes, format='audio/ogg', start_time=-1)
     #display(Audio('hello.mp3', autoplay=True))
     
     os.remove('hello.ogg')
