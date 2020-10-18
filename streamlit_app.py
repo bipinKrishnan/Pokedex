@@ -12,7 +12,7 @@ import streamlit as st
 from gtts import gTTS
 import os
 
-st.title("Pokédex for generation one Pokémon")
+st.markdown("##Pokédex for generation one Pokémon")
 
 df = pd.read_csv('utils/df.csv')
 
