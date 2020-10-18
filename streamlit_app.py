@@ -14,7 +14,7 @@ import os
 import random
 
 st.title("Pokédex")
-st.markdown("for generation one Pokémon")
+st.markdown("for generation one **Pokémon**")
 
 df = pd.read_csv('utils/pokemon.csv')
 df_ = pd.read_csv('utils/moves.csv')
@@ -56,7 +56,7 @@ if img:
         move = moves.iloc[rand]['move']
         move_desc = moves.iloc[rand]['description']
 
-        text = f"-- This is {pred}, a {type1} type {class1}\n-- Since {pred} is a {type1} pokemon, it has a special move called {move}\n-- {move_desc}\n\n----------------------"
+        text = f"-- This is {pred}, a {type1} type {class1}\n\n-- Since {pred} is a {type1} pokemon, it has a special move called {move}\n\n-- {move_desc}\n\n----------------------"
         st.text(text)
             
         tts = gTTS(text, lang='en-gb')
