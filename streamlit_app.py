@@ -13,6 +13,7 @@ from gtts import gTTS
 import os
 import base64
 from IPython.display import Audio, display
+import time
 
 df = pd.read_csv('utils/df.csv')
 
@@ -61,7 +62,7 @@ if pred in df[' Name'].values:
             """%mymidia_str
 
     mymidia_placeholder.empty()
-    #time.sleep(1)
+    time.sleep(1)
     mymidia_placeholder.markdown(mymidia_html, unsafe_allow_html=True)
     
     os.remove('hello.ogg')
