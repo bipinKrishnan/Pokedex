@@ -2,5 +2,5 @@ numpy==1.13.1
 efficientnet_pytorch==0.7.0
 Pillow==8.0.0
 streamlit==0.69.2
-torch==1.6.0
-torchvision==0.7.0
+torch==1.6.0+cpu
+torchvision==0.7.0+cpu
