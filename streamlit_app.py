@@ -11,11 +11,6 @@ from utils import targets
 import streamlit as st
 
 df = pd.read_csv('utils/df.csv')
-st.write(df.head())
-try: 
-    st.write(df[' Name'])
-except KeyError:
-    st.text('Keyerror')
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
@@ -39,7 +34,7 @@ out = model(img.unsqueeze(0))
 pred = targets.target[torch.max(out, 1)[1].item()]
 
 st.image(pil_img.resize((224, 224)), caption=pred)
-#if pred in df['Name']:
-#    st.text(df[df['Name']==pred])
+if pred in df['Name'].values:
+    st.text(df[df[' Name']==pred])
 #st.text(pred)
 
