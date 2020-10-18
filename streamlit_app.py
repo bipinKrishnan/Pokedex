@@ -57,4 +57,4 @@ if img:
         os.remove('hello.ogg')
             
     else:
-        st.text(f"This is {pred}")
+        st.text(f"This is {pred}\nThere is not much details about {pred} in my database!!!")
