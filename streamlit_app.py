@@ -11,6 +11,7 @@ from utils import targets
 import streamlit as st
 from gtts import gTTS
 import os
+import base64
 from IPython.display import Audio, display
 
 df = pd.read_csv('utils/df.csv')
@@ -47,8 +48,21 @@ if pred in df[' Name'].values:
     tts.save('hello.ogg')
     audio = open('hello.ogg', 'rb')
     audio_bytes = audio.read()
-    st.audio(audio_bytes, format='audio/ogg', autoplay=True)
+    #st.audio(audio_bytes, format='audio/ogg', autoplay=True)
     #display(Audio('hello.mp3', autoplay=True))
+    
+    mymidia_str = "data:audio/ogg;base64,%s"%(base64.b64encode(audio_bytes).decode())
+    mymidia_html = """
+                <audio autoplay class="stAudio">
+                <source src="%s" type="audio/ogg">
+                Your browser does not support the audio element.
+                </audio>
+            """%mymidia_str
+
+    mymidia_placeholder.empty()
+    #time.sleep(1)
+    mymidia_placeholder.markdown(mymidia_html, unsafe_allow_html=True)
+    
     os.remove('hello.ogg')
             
 else:
