@@ -12,7 +12,8 @@ import streamlit as st
 from gtts import gTTS
 import os
 
-st.markdown("**Pokédex** for generation one Pokémon")
+st.title("Pokédex")
+st.markdown("for generation one Pokémon")
 
 df = pd.read_csv('utils/df.csv')
 
