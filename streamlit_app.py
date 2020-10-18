@@ -23,13 +23,13 @@ model.load_state_dict(torch.load('utils/model.pt', map_location=torch.device('cp
 model.eval()
 
 img = st.file_uploader("Upload Image", type=['jpeg', 'jpg', 'png'])
-img = Image.open(img).convert('RGB')
+pil_img = Image.open(img).convert('RGB')
 
-img = transform(img)
+img = transform(pil_img)
 
 out = model(img.unsqueeze(0))
 pred = targets.target[torch.max(out, 1)[1].item()]
 
-st.image(img, caption=pred)
+st.image(pil_img, caption=pred)
 st.text(pred)
 
