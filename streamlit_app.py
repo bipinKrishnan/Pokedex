@@ -6,7 +6,7 @@ from torchvision.transforms import transforms
 from efficientnet_pytorch import EfficientNet
 from PIL import Image
 
-from targets import target
+from utils import targets
 import streamlit as st
 
 transform = transforms.Compose([
@@ -17,9 +17,9 @@ transform = transforms.Compose([
 ])
 
 model = EfficientNet.from_name("efficientnet-b0")
-model._fc = nn.Linear(1280, len(target))
+model._fc = nn.Linear(1280, len(targets.target))
 
-model.load_state_dict(torch.load('model.pt', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('utils/model.pt', map_location=torch.device('cpu')))
 model.eval()
 
 img = st.file_uploader("Upload Image", type=['jpeg', 'jpg', 'png'])
@@ -29,5 +29,5 @@ img = transform(img)
 
 out = model(img.unsqueeze(0))
 
-st.text(target[torch.max(out, 1)[1].item()])
+st.text(targets.target[torch.max(out, 1)[1].item()])
 
