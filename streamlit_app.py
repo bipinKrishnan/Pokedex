@@ -12,7 +12,10 @@ import streamlit as st
 
 df = pd.read_csv('utils/df.csv')
 st.write(df.head())
-st.write(df.loc(['Type1'], axis=1))
+try: 
+    st.write(df['Type1'])
+except KeyError:
+    st.write('Keyerror')
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
