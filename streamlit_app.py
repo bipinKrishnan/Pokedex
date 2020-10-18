@@ -17,7 +17,7 @@ transform = transforms.Compose([
 model = EfficientNet.from_name("efficientnet-b0")
 model._fc = nn.Linear(1280, 166)
 
-model.load_state_dict(torch.load('model.pt'))
+model.load_state_dict(torch.load('model.pt', map_location=torch.device('cpu')))
 model.eval()
 
 img = st.file_uploader("Upload Image", type=['jpeg', 'jpg', 'png'])
