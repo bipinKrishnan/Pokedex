@@ -44,12 +44,12 @@ if pred in df[' Name'].values:
     text = f"This is {pred}, a {values[' Type1'][values[' Type1'].index[0]]} type pokemon"
             
     tts = gTTS(text, lang='en')
-    tts.save('hello.mp3')
-    #audio = open('hello.ogg', 'rb')
-    #audio_bytes = audio.read()
-    #st.audio(audio_bytes, format='audio/ogg', start_time=0)
-    display(Audio('hello.mp3', autoplay=True))
-    os.remove('hello.mp3')
+    tts.save('hello.ogg')
+    audio = open('hello.ogg', 'rb')
+    audio_bytes = audio.read()
+    st.audio(audio_bytes, format='audio/ogg', autoplay=True)
+    #display(Audio('hello.mp3', autoplay=True))
+    os.remove('hello.ogg')
             
 else:
     st.text(f"This is {pred}")
