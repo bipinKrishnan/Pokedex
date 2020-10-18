@@ -56,10 +56,10 @@ if img:
         move = moves.iloc[rand]['move']
         move_desc = moves.iloc[rand]['description']
 
-        text = f"-- This is {pred}, a {type1} type {class1}\n\n-- Since {pred} is a {type1} pokemon, it has a special move called {move}\n\n-- {move_desc}\n\n----------------------"
+        text = f"-- This is {pred}, a {type1} type {class1}\n\n-- Since {pred} is a {type1} pokemon, it has a special move called {move}\n\n-- {move_desc}"
         st.text(text)
           
-        text_audio = text = f"This is {pred}, a {type1} type {class1}\nSince {pred} is a {type1} pokemon, it has a special move called {move}\n{move_desc}"
+        text_audio = f"This is {pred}, a {type1} type {class1}\nSince {pred} is a {type1} pokemon, it has a special move called {move}\n{move_desc}"
         tts = gTTS(text, lang='en-gb')
         tts.save('hello.ogg')
         audio = open('hello.ogg', 'rb')
