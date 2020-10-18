@@ -1,6 +1,7 @@
 import numpy as np
 
 import torch
+from torch import nn
 from torchvision.transforms import transforms
 from efficientnet_pytorch import EfficientNet
 from PIL import Image
