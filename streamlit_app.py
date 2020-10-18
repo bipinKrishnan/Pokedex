@@ -22,7 +22,7 @@ model._fc = nn.Linear(1280, len(targets.target))
 model.load_state_dict(torch.load('utils/model.pt', map_location=torch.device('cpu')))
 model.eval()
 
-img = st.file_uploader("Upload Image", type=['jpeg', 'jpg', 'png', 'webp])
+img = st.file_uploader("Upload Image", type=['jpeg', 'jpg', 'png', 'webp'])
 pil_img = Image.open(img).convert('RGB')
 
 img = transform(pil_img)
