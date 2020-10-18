@@ -60,7 +60,7 @@ if img:
         st.text(text)
           
         #text_audio = f"This is {pred}, a {type1} type {class1}\nSince {pred} is a {type1} pokemon, it has a special move called {move}\n{move_desc}"
-        tts = gTTS(text, lang='en-gb')
+        tts = gTTS(text[:-3], lang='en-gb')
         tts.save('hello.ogg')
         audio = open('hello.ogg', 'rb')
         audio_bytes = audio.read()
