@@ -17,7 +17,7 @@ st.title("Pokédex")
 st.markdown("for generation one Pokémon")
 
 df = pd.read_csv('utils/pokemon.csv')
-df_ = pd.read_csv('utils/moves.csv)
+df_ = pd.read_csv('utils/moves.csv')
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
