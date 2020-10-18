@@ -28,6 +28,8 @@ img = Image.open(img).convert('RGB')
 img = transform(img)
 
 out = model(img.unsqueeze(0))
+pred = targets.target[torch.max(out, 1)[1].item()]
 
-st.text(targets.target[torch.max(out, 1)[1].item()])
+st.image(img, caption=pred)
+st.text(pred)
 
