@@ -1,4 +1,4 @@
-gTTS
+ipython
 numpy
 pandas
 efficientnet_pytorch==0.7.0
