@@ -37,7 +37,7 @@ st.image(pil_img.resize((224, 224)), caption=pred)
 
 if pred in df[' Name'].values:
     values = df[df[' Name']==pred]
-    st.text(f"This is {pred}, a {values[' Type1']} pokemon")
+    st.text(f"This is {pred}, a {values[' Type1'][values[' Type1'].index[0]]} pokemon")
 else:
     st.text(f"This is {pred}")
 #st.text(pred)
