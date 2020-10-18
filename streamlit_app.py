@@ -46,7 +46,7 @@ if img:
 
     if pred in df['species'].values:
         cat = df[df['species']==pred]
-        species = cat['species'].index[0]
+        species = cat['species'][cat.index[0]]
         type1 = cat['type1'].index[0]
         class1 = cat['class'].index[0]
         st.write(species, type1, class1)
