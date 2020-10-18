@@ -11,6 +11,7 @@ from utils import targets
 import streamlit as st
 
 df = pd.read_csv('utils/df.csv')
+st.show(df.head())
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
