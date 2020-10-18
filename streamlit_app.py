@@ -11,7 +11,7 @@ from utils import targets
 import streamlit as st
 from gtts import gTTS
 import os
-from IPython.display import Audio
+from IPython.display import Audio, display
 
 df = pd.read_csv('utils/df.csv')
 
@@ -48,7 +48,7 @@ if pred in df[' Name'].values:
     #audio = open('hello.ogg', 'rb')
     #audio_bytes = audio.read()
     #st.audio(audio_bytes, format='audio/ogg', start_time=0)
-    st.write(Audio('hello.mp3', autoplay=True))
+    display(Audio('hello.mp3', autoplay=True))
     os.remove('hello.mp3')
             
 else:
