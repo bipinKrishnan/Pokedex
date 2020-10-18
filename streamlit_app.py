@@ -11,12 +11,13 @@ from utils import targets
 import streamlit as st
 from gtts import gTTS
 import os
+import random
 
 st.title("Pokédex")
 st.markdown("for generation one Pokémon")
 
-df = pd.read_csv('utils/df.csv')
-st.dataframe(df.head())
+df = pd.read_csv('utils/pokemon.csv')
+df_ = pd.read_csv('utils/moves.csv)
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
@@ -44,9 +45,17 @@ if img:
     st.image(pil_img.resize((224, 224)))
 
     if pred in df[' Name'].values:
-        values = df[df[' Name']==pred]
-        #st.text(f"This is {pred}, a {values[' Type1'][values[' Type1'].index[0]]} type pokemon")
-        text = f"This is {pred}, a {values[' Type1'][values[' Type1'].index[0]]} type pokemon"
+        cat = df[df['species']==pred]
+        species = cat['species][cat['species'].index[0]]
+        type1 = cat['type1'][cat['type1'].index[0]]
+        class1 = cat['class'][cat['class'].index[0]]
+        
+        moves = df_[df['type']==type1]
+        rand = random.randrange(0, len(moves))
+        move = moves.iloc[rand]['move']
+        move_desc = moves.iloc[rand]['description']
+
+        text = f"This is {pred}, a {type1} type {class1}\nSince {pred} is a {type1} pokemon, it has a special move called {move}\n{move_desc}"
         st.text(text)
             
         tts = gTTS(text, lang='en-gb')
