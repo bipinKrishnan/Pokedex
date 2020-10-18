@@ -40,12 +40,13 @@ if img:
     out = model(img.unsqueeze(0))
     pred = targets.target[torch.max(out, 1)[1].item()]
 
-    st.image(pil_img.resize((224, 224)), caption=pred)
+    st.image(pil_img.resize((224, 224)))
 
     if pred in df[' Name'].values:
         values = df[df[' Name']==pred]
         #st.text(f"This is {pred}, a {values[' Type1'][values[' Type1'].index[0]]} type pokemon")
         text = f"This is {pred}, a {values[' Type1'][values[' Type1'].index[0]]} type pokemon"
+        st.text(text)
             
         tts = gTTS(text, lang='en-gb')
         tts.save('hello.ogg')
