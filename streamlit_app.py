@@ -28,14 +28,15 @@ model.load_state_dict(torch.load('utils/model.pt', map_location=torch.device('cp
 model.eval()
 
 img = st.file_uploader("Upload Image", type=['jpeg', 'jpg', 'png', 'webp'])
-pil_img = Image.open(img).convert('RGB')
-
-img = transform(pil_img)
-
-out = model(img.unsqueeze(0))
-pred = targets.target[torch.max(out, 1)[1].item()]
 
 if img:
+    pil_img = Image.open(img).convert('RGB')
+
+    img = transform(pil_img)
+
+    out = model(img.unsqueeze(0))
+    pred = targets.target[torch.max(out, 1)[1].item()]
+
     st.image(pil_img.resize((224, 224)), caption=pred)
 
     if pred in df[' Name'].values:
