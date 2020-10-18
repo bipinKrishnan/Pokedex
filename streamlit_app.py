@@ -194,5 +194,5 @@ img = transform(img)
 
 out = model(img.unsqueeze(0))
 
-st.write(torch.max(out, 1)[1])
+st.text(target[torch.max(out, 1)[1].item()])
 
