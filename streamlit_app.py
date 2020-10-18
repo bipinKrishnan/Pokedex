@@ -30,6 +30,6 @@ img = transform(pil_img)
 out = model(img.unsqueeze(0))
 pred = targets.target[torch.max(out, 1)[1].item()]
 
-st.image(pil_img, caption=pred)
+st.image(pil_img.resize((50, 50)), caption=pred)
 st.text(pred)
 
