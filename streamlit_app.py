@@ -9,6 +9,8 @@ from PIL import Image
 
 from utils import targets
 import streamlit as st
+from gtts import gTTS
+import os
 
 df = pd.read_csv('utils/df.csv')
 
@@ -38,6 +40,14 @@ st.image(pil_img.resize((224, 224)), caption=pred)
 if pred in df[' Name'].values:
     values = df[df[' Name']==pred]
     st.text(f"This is {pred}, a {values[' Type1'][values[' Type1'].index[0]]} type pokemon")
+            
+    tts = gTTS('hello', lang='en')
+    tts.save('hello.ogg')
+    audio = open('hello.ogg', 'rb')
+    audio_bytes = audio.read()
+    st.audio(audio_bytes, format='audio/ogg')
+    os.remove('hello.ogg')
+            
 else:
     st.text(f"This is {pred}")
 #st.text(pred)
