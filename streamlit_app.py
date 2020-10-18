@@ -44,9 +44,9 @@ if img:
 
     st.image(pil_img.resize((224, 224)))
 
-    if pred in df[' Name'].values:
+    if pred in df['species'].values:
         cat = df[df['species']==pred]
-        species = cat['species].index[0]
+        species = cat['species'].index[0]
         type1 = cat['type1'].index[0]
         class1 = cat['class'].index[0]
         
