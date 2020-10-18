@@ -11,6 +11,7 @@ from utils import targets
 import streamlit as st
 from gtts import gTTS
 import os
+from IPython.display import *
 
 df = pd.read_csv('utils/df.csv')
 
@@ -42,11 +43,12 @@ if pred in df[' Name'].values:
     st.text(f"This is {pred}, a {values[' Type1'][values[' Type1'].index[0]]} type pokemon")
             
     tts = gTTS('hello', lang='en')
-    tts.save('hello.ogg')
-    audio = open('hello.ogg', 'rb')
-    audio_bytes = audio.read()
-    st.audio(audio_bytes, format='audio/ogg')
-    os.remove('hello.ogg')
+    tts.save('hello.mp3')
+    #audio = open('hello.ogg', 'rb')
+    #audio_bytes = audio.read()
+    #st.audio(audio_bytes, format='audio/ogg')
+    Audio('hello.mp3', autoplay=True)
+    os.remove('hello.mp3')
             
 else:
     st.text(f"This is {pred}")
