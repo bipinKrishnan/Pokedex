@@ -36,7 +36,7 @@ pred = targets.target[torch.max(out, 1)[1].item()]
 st.image(pil_img.resize((224, 224)), caption=pred)
 
 if pred in df[' Name'].values:
-    values = df[df['Name']==pred]
+    values = df[df[' Name']==pred]
     st.text(f"This is {pred}, a {values[' Type1']} pokemon")
 else:
     st.text(f"This is {pred}")
