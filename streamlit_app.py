@@ -51,7 +51,7 @@ if img:
         class1 = cat['class'].index[0]
         
         moves = df_[df_['type']==cat['type1'][0]]
-        st.write(type1)
+        st.write(cat['type1'][0])
         rand = random.randrange(0, len(moves))
         move = moves.iloc[rand]['move']
         move_desc = moves.iloc[rand]['description']
