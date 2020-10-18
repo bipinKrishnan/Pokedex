@@ -13,7 +13,7 @@ import streamlit as st
 df = pd.read_csv('utils/df.csv')
 st.write(df.head())
 try: 
-    st.write(df['Type1'])
+    st.write(df[' Name'])
 except KeyError:
     st.text('Keyerror')
 
