@@ -64,7 +64,7 @@ def get_gif(name):
         url = soup.find_all('img')[-5].get('src')
     
         return url
-    except HTTPError:
+    except urllib.error.HTTPError:
         return None
 
 
