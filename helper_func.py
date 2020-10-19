@@ -65,6 +65,7 @@ def get_image(name):
         #soup = BeautifulSoup(html, 'html.parser')
         #url = soup.find_all('img')[2].get('src')
     #url = f'https://img.pokemondb.net/artwork/{name}.jpg'
+    st.text(u)
     html = requests.get(u).content
     soup = BeautifulSoup(html, 'html.parser')
     url = soup.find_all('img')[5].get('src')
