@@ -15,7 +15,7 @@ def create_image(img):
     pil_img = Image.open(img).convert('RGB')   
     img = transform(pil_img)    
 
-    return pil_imge, img
+    return pil_img, img
 
 def load_df(path1, path2):
     df1 = pd.read_csv(path1)
