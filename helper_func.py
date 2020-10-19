@@ -68,7 +68,7 @@ def get_image(name):
         #soup = BeautifulSoup(html, 'html.parser')
         #url = soup.find_all('img')[2].get('src')
         url = f'https://img.pokemondb.net/artwork/large/{name}.jpg'
-        response = requests.get('https://img.pokemondb.net/artwork/golduck.jpg')
+        response = requests.get(url)
         img = Image.open(BytesIO(response.content))
         
         return img
