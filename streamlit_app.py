@@ -22,7 +22,7 @@ if img:
 
     url_img = get_image(pred)
     #response_code = requests.get(url_img).status_code
-    
+    st.text(url_img)
     if url_img:
         st.markdown(f"![Alt Text]({url_img})")
     else:
