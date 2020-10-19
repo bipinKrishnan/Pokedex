@@ -6,6 +6,8 @@ from gtts import gTTS
 import random
 from targets import target
 
+import streamlit as st
+
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
     transforms.ToTensor(),
