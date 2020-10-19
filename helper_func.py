@@ -6,14 +6,6 @@ from gtts import gTTS
 import random
 from targets import target
 
-import requests
-from io import BytesIO
-import numpy as np
-
-#from bs4 import BeautifulSoup
-import urllib
-#import re
-
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
     transforms.ToTensor(),
