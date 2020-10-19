@@ -19,7 +19,9 @@ if img:
     images = create_image(img)
     pred = make_pred(model, images[1])
 
-    st.image(images[0].resize((224, 224)))
+    #st.image(images[0].resize((224, 224)))
+    url = get_gif(pred)
+    st.markdown(f"![Alt Text]({url})")
 
     if pred in df['species'].values:
         details = get_pokemon_details(pred, df, df_)
@@ -40,7 +42,4 @@ if img:
         st.audio(audio_bytes, format='audio/ogg', start_time=0)
 
         os.remove('hello.ogg')
-        
-    st.text(get_gif(pred))    
-    st.markdown("![Alt Text](get_gif(pred))")
 
