@@ -20,7 +20,7 @@ if img:
     images = create_image(img)
     pred = make_pred(model, images[1])
 
-    url_img = get_image(pred)
+    url_img = get_url(pred)
     response_code = requests.get(url_img).status_code
     
     if response_code == 200:
