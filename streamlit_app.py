@@ -19,9 +19,11 @@ if img:
     images = create_image(img)
     pred = make_pred(model, images[1])
 
-    #st.image(images[0].resize((224, 224)))
     url = get_gif(pred)
-    st.markdown(f"![Alt Text]({url})")
+    if url:
+        st.markdown(f"![Alt Text]({url})")
+    else:
+        st.image(images[0].resize((224, 224)))
 
     if pred in df['species'].values:
         details = get_pokemon_details(pred, df, df_)
