@@ -1,4 +1,4 @@
-target = ['Voltorb',
+target =['Voltorb',
  'NidoranM',
  'Nidorino',
  'Jynx',
