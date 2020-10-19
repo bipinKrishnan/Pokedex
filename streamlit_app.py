@@ -20,7 +20,7 @@ if img:
     pred = make_pred(model, images[1])
 
     url_img = get_image(pred)
-    if url:
+    if url_img:
         st.image(url_img)
     else:
         st.image(images[0].resize((224, 224)))
