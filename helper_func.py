@@ -9,6 +9,7 @@ from targets import target
 from bs4 import BeautifulSoup
 import requests
 import re
+import streamlit as st
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
