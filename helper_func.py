@@ -64,7 +64,7 @@ def get_gif(name):
         soup = BeautifulSoup(html, 'html.parser')
         url = soup.find_all('img')[2].get('src')
         
-        if name.split(' ')[0] not in url:
+        if name.lower().split(' ')[0] not in url.lower():
             return None
         else:
             return url
