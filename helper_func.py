@@ -6,8 +6,6 @@ from gtts import gTTS
 import random
 from targets import target
 
-import streamlit as st
-
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
     transforms.ToTensor(),
@@ -30,7 +28,6 @@ def load_df(path1, path2):
 def make_pred(model, img):
     out = model(img.unsqueeze(0))
     pred = target[torch.max(out, 1)[1].item()]
-    st.text(torch.max(out, 1)[1])
     
     return pred
     
