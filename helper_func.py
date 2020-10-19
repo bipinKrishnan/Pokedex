@@ -62,17 +62,11 @@ def get_audio(text):
     return audio_bytes
 
 def get_image(name):
-    try:
-        name = name.replace(' ', '')
+    name = name.replace(' ', '')
         #u = ''.join(f'https://tenor.com/search/{name}-gifs')
         #html = urllib.request.urlopen(u)
         #soup = BeautifulSoup(html, 'html.parser')
         #url = soup.find_all('img')[2].get('src')
-        url = f'https://img.pokemondb.net/artwork/large/{name}.jpg'
-        response = requests.get(url)
-        img = np.array(Image.open(BytesIO(response.content)))
+    url = f'https://img.pokemondb.net/artwork/{name}.jpg'
         
-        return img
-        
-    except requests.exception.HTTPError:
-        return None
+    return url
