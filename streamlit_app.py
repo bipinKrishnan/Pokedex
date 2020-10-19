@@ -8,7 +8,7 @@ from helper_func import *
 
 
 st.title("Pokédex")
-st.markdown("for generation one Pokémon")
+st.markdown("for generation one **Pokémon**")
 
 df, df_ = load_df('utils/pokemon.csv', 'utils/moves.csv')
 
