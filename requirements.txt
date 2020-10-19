@@ -1,5 +1,4 @@
 requests
-bs4
 pandas
 efficientnet_pytorch==0.7.0
 Pillow==8.0.0
