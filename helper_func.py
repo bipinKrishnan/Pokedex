@@ -59,7 +59,7 @@ def get_audio(text):
 
 def get_image(name):
     name = name.replace(' ', '')
-    u = f'https://www.google.co.in/search?q={name}&source=lnms&tbm=isch'
+    u = f'https://www.google.co.in/search?q={name}+gif&source=lnms&tbm=isch'
         #u = ''.join(f'https://tenor.com/search/{name}-gifs')
         #html = urllib.request.urlopen(u)
         #soup = BeautifulSoup(html, 'html.parser')
