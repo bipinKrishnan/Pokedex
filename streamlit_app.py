@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import torch
+import requests
 
 from model import create_model
 from helper_func import *
