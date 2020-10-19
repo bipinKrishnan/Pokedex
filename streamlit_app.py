@@ -24,20 +24,19 @@ if img:
     if pred in df['species'].values:
         details = get_pokemon_details(pred, df, df_)
 
-        text = f"-- This is {pred}, a {details[0]} type {details[1]}\n\n-- Since {pred} is a {details[0]} pokemon, it has a special move called {details[2]}\n\n-- {details[3]}\n\n"
+        text = f"-- This is {pred}, a {details[0]} type {details[1]}\n\n-- Since {pred} is a {details[0]} pokemon, it has a special move called {details[2]}\n\n-- {details[3]}\n\n_"
         st.text(text)
 
-        audio_bytes = get_audio(text)
+        audio_bytes = get_audio(text[:-1])
         st.audio(audio_bytes, format='audio/ogg', start_time=0)
-        st.text('___')
     
         os.remove('hello.ogg')
             
     else:
-        text = f"This is {pred}\nCurrently, there is not much details about {pred} in my database!!!"
+        text = f"This is {pred}\nCurrently, there is not much details about {pred} in my database!!!\n\n_"
         st.text(text)
 
-        audio_bytes = get_audio(text)
+        audio_bytes = get_audio(text[:-1])
         st.audio(audio_bytes, format='audio/ogg', start_time=0)
 
         os.remove('hello.ogg')
