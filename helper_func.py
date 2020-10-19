@@ -61,10 +61,10 @@ def get_gif(name):
     try:
         name = name.replace(' ', '')
         #u = ''.join(f'https://tenor.com/search/{name}-gifs')
-        u = f'https://img.pokemondb.net/artwork/large/{name}.jpg'
-        html = urllib.request.urlopen(u)
-        soup = BeautifulSoup(html, 'html.parser')
-        url = soup.find_all('img')[2].get('src')
+        url = f'https://img.pokemondb.net/artwork/large/{name}.jpg'
+        #html = urllib.request.urlopen(u)
+        #soup = BeautifulSoup(html, 'html.parser')
+        #url = soup.find_all('img')[2].get('src')
         
         return url
         
