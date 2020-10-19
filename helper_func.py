@@ -9,7 +9,6 @@ from targets import target
 from bs4 import BeautifulSoup
 import urllib
 import re
-import streamlit as st
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
@@ -65,14 +64,7 @@ def get_gif(name):
         soup = BeautifulSoup(html, 'html.parser')
         url = soup.find_all('img')[2].get('src')
         
-        st.write(name.lower(), url.lower())
-        if name.lower().split(' ')[0] not in url.lower():
-            return None
-        else:
-            return url
+        return url
         
     except urllib.error.HTTPError:
         return None
-
-
-    
