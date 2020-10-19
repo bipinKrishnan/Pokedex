@@ -6,6 +6,10 @@ from gtts import gTTS
 import random
 from targets import target
 
+from bs4 import BeautifulSoup
+import requests
+import re
+
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
     transforms.ToTensor(),
@@ -55,10 +59,14 @@ def get_audio(text):
 
 def get_image(name):
     name = name.replace(' ', '')
+    u = f'https://www.google.co.in/search?q={name}&source=lnms&tbm=isch'
         #u = ''.join(f'https://tenor.com/search/{name}-gifs')
         #html = urllib.request.urlopen(u)
         #soup = BeautifulSoup(html, 'html.parser')
         #url = soup.find_all('img')[2].get('src')
-    url = f'https://img.pokemondb.net/artwork/{name}.jpg'
+    #url = f'https://img.pokemondb.net/artwork/{name}.jpg'
+    html = requests.get(q).content
+    soup = BeautifulSoup(html, 'html.parser')
+    url = soup.find_all('img')[5].get('src')
         
-    return url.lower()
+    return url
