@@ -6,9 +6,12 @@ from gtts import gTTS
 import random
 from targets import target
 
-from bs4 import BeautifulSoup
-import urllib
-import re
+import requests
+from io import BytesIO
+
+#from bs4 import BeautifulSoup
+#import urllib
+#import re
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
@@ -57,16 +60,18 @@ def get_audio(text):
 
     return audio_bytes
 
-def get_gif(name):
+def get_image(name):
     try:
         name = name.replace(' ', '')
         #u = ''.join(f'https://tenor.com/search/{name}-gifs')
-        url = f'https://img.pokemondb.net/artwork/large/{name}.jpg'
         #html = urllib.request.urlopen(u)
         #soup = BeautifulSoup(html, 'html.parser')
         #url = soup.find_all('img')[2].get('src')
+        url = f'https://img.pokemondb.net/artwork/large/{name}.jpg'
+        response = requests.get('https://img.pokemondb.net/artwork/golduck.jpg')
+        img = Image.open(BytesIO(response.content))
         
-        return url
+        return img
         
-    except urllib.error.HTTPError:
+    except Error:
         return None
