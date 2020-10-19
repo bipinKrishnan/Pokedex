@@ -69,4 +69,4 @@ def get_image(name):
         #url = soup.find_all('img')[2].get('src')
     url = f'https://img.pokemondb.net/artwork/{name}.jpg'
         
-    return url
+    return url.lower()
