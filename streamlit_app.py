@@ -22,7 +22,7 @@ if img:
 
     url_img = get_image(pred)
     if url_img:
-        st.image(url_img)
+        st.markdown(f"![Alt Text]({url_img})")
     else:
         st.image(images[0].resize((224, 224)))
 
