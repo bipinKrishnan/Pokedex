@@ -63,8 +63,12 @@ def get_gif(name):
         html = urllib.request.urlopen(u)
         soup = BeautifulSoup(html, 'html.parser')
         url = soup.find_all('img')[2].get('src')
-    
-        return url
+        
+        if pred.split(' ')[0] not in url:
+            return None
+        else:
+            return url
+        
     except urllib.error.HTTPError:
         return None
 
