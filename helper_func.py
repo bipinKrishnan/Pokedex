@@ -10,7 +10,7 @@ import requests
 from io import BytesIO
 
 #from bs4 import BeautifulSoup
-#import urllib
+import urllib
 #import re
 
 transform = transforms.Compose([
@@ -73,5 +73,5 @@ def get_image(name):
         
         return img
         
-    except Error:
+    except urllib.error.HTTPError:
         return None
