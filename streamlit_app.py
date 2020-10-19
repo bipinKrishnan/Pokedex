@@ -42,4 +42,3 @@ if img:
         st.audio(audio_bytes, format='audio/ogg', start_time=0)
 
         os.remove('hello.ogg')
-
