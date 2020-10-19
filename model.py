@@ -8,7 +8,7 @@ def create_model():
     model = EfficientNet.from_name("efficientnet-b2")
     model._fc = nn.Linear(1408, len(target))
 
-    model.load_state_dict(torch.load('utils/model.pt', map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load('utils/model-91.0374.pt', map_location=torch.device('cpu')))
     model.eval()
 
     return model
