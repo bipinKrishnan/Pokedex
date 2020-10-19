@@ -1,3 +1,4 @@
+import torch
 from PIL import Image
 from torchvision.transforms import transforms
 import pandas as pd
