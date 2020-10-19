@@ -15,8 +15,6 @@ model = create_model()
 
 img = st.file_uploader("Upload Image", type=['jpeg', 'jpg', 'png', 'webp'])
 
-st.markdown("![Alt Text](https://i.pinimg.com/originals/91/a0/3b/91a03bcbf768645d172ab5574732add4.gif)")
-
 if img:
     images = create_image(img)
     pred = make_pred(model, images[1])
@@ -42,3 +40,6 @@ if img:
         st.audio(audio_bytes, format='audio/ogg', start_time=0)
 
         os.remove('hello.ogg')
+        
+    st.markdown("![Alt Text](get_gif(pred))")
+
