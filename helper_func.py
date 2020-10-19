@@ -60,8 +60,8 @@ def get_audio(text):
 
 def get_gif(name):
     st.text(name)
-    html = urllib.request.urlopen(f'https://tenor.com/search/{name}-gifs')
     st.text(f'https://tenor.com/search/{name}-gifs')
+    html = urllib.request.urlopen(f'https://tenor.com/search/{name}-gifs')
     soup = BeautifulSoup(html, 'html.parser')
     url = soup.find_all('img')[-5].get('src')
     
