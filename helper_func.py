@@ -74,5 +74,5 @@ def get_image(name):
         
         return img
         
-    except urllib.error.HTTPError:
+    except requests.exception.HTTPError:
         return None
