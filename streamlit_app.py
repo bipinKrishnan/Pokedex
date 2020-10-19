@@ -41,5 +41,6 @@ if img:
 
         os.remove('hello.ogg')
         
+    st.text(get_gif(pred))    
     st.markdown("![Alt Text](get_gif(pred))")
 
