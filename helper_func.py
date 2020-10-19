@@ -61,7 +61,7 @@ def get_gif(name):
     try:
         html = urllib.request.urlopen(f'https://tenor.com/search/{name}-gifs')
         soup = BeautifulSoup(html, 'html.parser')
-        url = soup.find_all('img')[-5].get('src')
+        url = soup.find_all('img')[5].get('src')
     
         return url
     except urllib.error.HTTPError:
