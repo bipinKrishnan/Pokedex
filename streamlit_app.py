@@ -23,8 +23,8 @@ if img:
     st.text(url_img)
     if url_img:
         md = st.markdown(f"![Alt Text]({url_img})")
-        if md:
-            st.text('md')
+        if md=='Alt Text':
+            st.text('not md')
         else:
             st.image(images[0].resize((224, 224)))
 
