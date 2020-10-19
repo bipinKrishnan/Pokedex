@@ -53,7 +53,7 @@ def get_audio(text):
 
     return audio_bytes
 
-def get_image(name):
+def get_url(name):
     name = name.replace(' ', '')
     #u = ''.join(f'https://tenor.com/search/{name}-gifs')
     #html = urllib.request.urlopen(u)
