@@ -21,9 +21,9 @@ if img:
     pred = make_pred(model, images[1])
 
     url_img = get_image(pred)
-    #response_code = requests.get(url_img).status_code
-    st.text(url_img)
-    if url_img:
+    response_code = requests.get(url_img).status_code
+    
+    if response_code == 200:
         st.markdown(f"![Alt Text]({url_img})")
     else:
         st.image(images[0].resize((224, 224)))
