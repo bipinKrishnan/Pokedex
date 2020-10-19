@@ -21,6 +21,7 @@ if img:
     pred = make_pred(model, images[1])
 
     url_img = get_image(pred)
+    st.text(url_img)
     if url_img:
         st.markdown(f"![Alt Text]({url_img})")
     else:
