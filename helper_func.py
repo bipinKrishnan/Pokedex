@@ -3,6 +3,7 @@ from torchvision.transforms import transforms
 import pandas as pd
 from gtts import gTTS
 import random
+from targets import target
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
@@ -23,6 +24,12 @@ def load_df(path1, path2):
 
     return df1, df2
 
+def make_pred(model, img):
+    out = model(img.unsqueeze(0))
+    pred = target[torch.max(out, 1)[1].item()]
+    
+    return pred
+    
 def get_pokemon_details(pred, df, df_):
     cat = df[df['species']==pred]
     species = cat['species'][cat.index[0]]
