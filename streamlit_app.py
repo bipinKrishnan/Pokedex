@@ -20,13 +20,12 @@ if img:
     pred = make_pred(model, images[1])
 
     url_img = get_image(pred)
-    st.text(url_img)
-    if url_img:
-        md = st.markdown(f"![Alt Text]({url_img})")
-        if md=='Alt Text':
-            st.text('not md')
-        else:
-            st.image(images[0].resize((224, 224)))
+    response_code = requests.get(url_img).status_code
+    
+    if response_code == 200:
+        st.markdown(f"![Alt Text]({url_img})")
+    else:
+        st.image(images[0].resize((224, 224)))
 
     if pred in df['species'].values:
         details = get_pokemon_details(pred, df, df_)
