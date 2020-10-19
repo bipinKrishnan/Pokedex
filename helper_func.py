@@ -69,7 +69,8 @@ def get_image(name):
     st.text(u)
     html = requests.get(u).content
     soup = BeautifulSoup(html, 'html.parser')
-    url = soup.find_all('img', class_='n3VNCb').get('src')
     st.text(soup.find_all('img', class_='n3VNCb'))
+    url = soup.find_all('img', class_='n3VNCb').get('src')
+    
         
     return url
