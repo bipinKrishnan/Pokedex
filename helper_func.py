@@ -9,6 +9,7 @@ from targets import target
 from bs4 import BeautifulSoup
 import urllib
 import re
+import streamlit as st
 
 transform = transforms.Compose([
     transforms.Resize((100, 100)),
@@ -58,7 +59,9 @@ def get_audio(text):
     return audio_bytes
 
 def get_gif(name):
+    st.text(name)
     html = urllib.request.urlopen(f'https://tenor.com/search/{name}-gifs')
+    st.text(f'https://tenor.com/search/{name}-gifs')
     soup = BeautifulSoup(html, 'html.parser')
     url = soup.find_all('img')[-5].get('src')
     
