@@ -1,9 +1,8 @@
-ipython
-numpy
 pandas
 efficientnet_pytorch==0.7.0
 Pillow==8.0.0
 streamlit==0.69.2
+gTTS
 --find-links https://download.pytorch.org/whl/torch_stable.html
 torch==1.5.1+cpu 
 --find-links https://download.pytorch.org/whl/torch_stable.html
