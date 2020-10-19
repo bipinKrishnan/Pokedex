@@ -28,6 +28,7 @@ def load_df(path1, path2):
 def make_pred(model, img):
     out = model(img.unsqueeze(0))
     pred = target[torch.max(out, 1)[1].item()]
+    st.text(pred)
     
     return pred
     
