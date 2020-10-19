@@ -23,8 +23,8 @@ if img:
     st.text(url_img)
     if url_img:
         md = st.markdown(f"![Alt Text]({url_img})")
-    else:
-        st.image(images[0].resize((224, 224)))
+        if md is None:
+            st.image(images[0].resize((224, 224)))
 
     if pred in df['species'].values:
         details = get_pokemon_details(pred, df, df_)
