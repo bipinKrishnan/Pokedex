@@ -8,6 +8,7 @@ from targets import target
 
 import requests
 from io import BytesIO
+import numpy as np
 
 #from bs4 import BeautifulSoup
 import urllib
@@ -69,7 +70,7 @@ def get_image(name):
         #url = soup.find_all('img')[2].get('src')
         url = f'https://img.pokemondb.net/artwork/large/{name}.jpg'
         response = requests.get(url)
-        img = Image.open(BytesIO(response.content))
+        img = np.array(Image.open(BytesIO(response.content)))
         
         return img
         
