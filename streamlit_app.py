@@ -14,6 +14,7 @@ df, df_ = load_df('utils/pokemon.csv', 'utils/moves.csv')
 model = create_model()
 
 img = st.file_uploader("Upload Image", type=['jpeg', 'jpg', 'png', 'webp'])
+st.markdown("![Alt Text](https://img.pokemondb.net/artwork/magnemite.jpg)")
 
 if img:
     images = create_image(img)
