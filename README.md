@@ -18,12 +18,12 @@ You can upload pokemon images and play with the app [here](share.streamlit.io/bi
        streamlit run streamlit_app.py 
        
 #### II. Code structure
-1. [model.py](https://github.com/bipinKrishnan/pokemon/blob/main/model.py) - This file contains the code to make changes to the EfficientNet model to suit our problem set.
+* [model.py](https://github.com/bipinKrishnan/pokemon/blob/main/model.py) - This file contains the code to make changes to the EfficientNet model to suit our problem set.
 
-2. [helper_func.py](https://github.com/bipinKrishnan/pokemon/blob/main/helper_func.py) - This file contains helper functions to load and preprocess the image, to make predictions, get details about the predicted pokemon and so on.
+* [helper_func.py](https://github.com/bipinKrishnan/pokemon/blob/main/helper_func.py) - This file contains helper functions to load and preprocess the image, to make predictions, get details about the predicted pokemon and so on.
 
-3. [streamlit_app.py](https://github.com/bipinKrishnan/pokemon/blob/main/streamlit_app.py) - This file contains all the details on how to display the front-end of the streamlit app.
+* [streamlit_app.py](https://github.com/bipinKrishnan/pokemon/blob/main/streamlit_app.py) - This file contains all the details on how to display the front-end of the streamlit app.
 
-4. [targets.py](https://github.com/bipinKrishnan/pokemon/blob/main/targets.py) - This file contains all the 166 pokemon names stored in a variable called target in the form of a python list.
+* [targets.py](https://github.com/bipinKrishnan/pokemon/blob/main/targets.py) - This file contains all the 166 pokemon names stored in a variable called target in the form of a python list.
 
 
