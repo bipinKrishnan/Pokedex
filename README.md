@@ -31,4 +31,8 @@ You can upload pokemon images and play with the app or interactively play with c
 #### III. Pretrained weights
 * You can find the pretrained weights for the model [here](https://github.com/bipinKrishnan/pokemon/tree/main/utils).
 
+  [![app](https://img.shields.io/badge/download-weights-brown)](https://github.com/bipinKrishnan/pokemon/raw/main/utils/model.pt)
+
+
+
 
