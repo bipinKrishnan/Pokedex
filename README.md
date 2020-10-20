@@ -3,7 +3,7 @@ This is a web app version similar to Pokédex(a device for getting details about
 
 You can upload pokemon images and play with the app [here](share.streamlit.io/bipinkrishnan/pokemon/main).
 
-### Running the app locally
+#### I. Running the app locally
 1. Clone the repo by running the below command and change directory to the cloned repo
 
        git clone https://github.com/bipinKrishnan/pokemon.git
@@ -14,5 +14,8 @@ You can upload pokemon images and play with the app [here](share.streamlit.io/bi
 
 2. Now run the following command to launch the app
 
-       streamlit run streamlit_app.py  
+       streamlit run streamlit_app.py 
+       
+### Code structure
+
 
