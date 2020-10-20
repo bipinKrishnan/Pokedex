@@ -22,7 +22,7 @@ You can upload pokemon images by launching the app or interactively play with co
        streamlit run streamlit_app.py 
        
 #### II. Code structure
-* [model.py](https://github.com/bipinKrishnan/pokemon/blob/main/model.py) - This file contains the code to make changes to the EfficientNet model to suit our problem set.
+* [model.py](https://github.com/bipinKrishnan/pokemon/blob/main/model.py) - This file contains the code to change the EfficientNet model architecture to suit our problem set.
 
 * [helper_func.py](https://github.com/bipinKrishnan/pokemon/blob/main/helper_func.py) - This file contains helper functions to load and preprocess the image, to make predictions, get details about the predicted pokemon and so on.
 
