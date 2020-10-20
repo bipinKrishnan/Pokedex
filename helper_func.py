@@ -46,7 +46,7 @@ def get_pokemon_details(pred, df, df_):
     return type1, class1, move, move_desc
 
 def get_audio(text):
-    tts = gTTS(text[:-3], lang='en-za')
+    tts = gTTS(text[:-3], lang='en-in')
     tts.save('hello.ogg')
     audio = open('hello.ogg', 'rb')
     audio_bytes = audio.read()
