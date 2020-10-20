@@ -1,10 +1,10 @@
-# Pokédex
-
-[![app](https://img.shields.io/badge/launch-app-brightgreen)](https://share.streamlit.io/bipinkrishnan/pokemon/main)  [![notebook](https://img.shields.io/badge/launch-notebook-blue)](https://www.kaggle.com/bipinkrishnan/pokemon-image-classification-with-efficientnet)  
+# Pokédex  
 
 This is a web app version similar to Pokédex(a device for getting details about a pokemon found in the Pokémon cartoon series), built and deployed with [streamlit](https://www.streamlit.io/).
 
-You can upload pokemon images and play with the app [here](https://share.streamlit.io/bipinkrishnan/pokemon/main).
+You can upload pokemon images and play with the app or interactively play with code by lauching the notebook.
+
+[![app](https://img.shields.io/badge/launch-app-brightgreen)](https://share.streamlit.io/bipinkrishnan/pokemon/main)  [![notebook](https://img.shields.io/badge/launch-notebook-blue)](https://www.kaggle.com/bipinkrishnan/pokemon-image-classification-with-efficientnet)
 
 #### I. Running the app locally
 1. Clone the repo by running the below command and change directory to the cloned repo
