@@ -1,5 +1,7 @@
 # Pokédex  
 
+![Alt Text]('media/pikachu.gif')
+
 This is a web app version similar to Pokédex(a device for getting details about a pokemon found in the Pokémon cartoon series), built and deployed with [streamlit](https://www.streamlit.io/).
 
 You can upload pokemon images and play with the app or interactively play with code by lauching the notebook.
