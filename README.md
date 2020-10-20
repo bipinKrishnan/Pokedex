@@ -1,6 +1,6 @@
 # Pokédex
 
-[![app](https://img.shields.io/badge/launch-app-brightgreen)](https://share.streamlit.io/bipinkrishnan/pokemon/main)  [![notebook](https://img.shields.io/badge/launch-notebook-violet)](https://www.kaggle.com/bipinkrishnan/pokemon-image-classification-with-efficientnet)  
+[![app](https://img.shields.io/badge/launch-app-brightgreen)](https://share.streamlit.io/bipinkrishnan/pokemon/main)  [![notebook](https://img.shields.io/badge/launch-notebook-blue)](https://www.kaggle.com/bipinkrishnan/pokemon-image-classification-with-efficientnet)  
 
 This is a web app version similar to Pokédex(a device for getting details about a pokemon found in the Pokémon cartoon series), built and deployed with [streamlit](https://www.streamlit.io/).
 
