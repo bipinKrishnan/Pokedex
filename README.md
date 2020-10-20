@@ -1,7 +1,6 @@
 # Pokédex  
 
-#![Alt Text](media/pikachu.gif)
-<img src="media/pikachu.gif" width="40" height="40" />
+<center><img src="media/pikachu.gif" width="100" height="100" /></center>
 
 This is a web app version similar to Pokédex(a device for getting details about a pokemon found in the Pokémon cartoon series), built and deployed with [streamlit](https://www.streamlit.io/).
 
