@@ -31,7 +31,7 @@ if img:
     if pred in df['species'].values:
         details = get_pokemon_details(pred, df, df_)
 
-        text = f"-- This is {pred}, a {details[0]} type {details[1]}\n\n-- Since {pred} is a {details[0]} pokemon, it has a special move called {details[2]}\n\n-- {details[3]}\n\n_"
+        text = f"-- This is {pred}, a {details[0]} type {details[1]}\n\n-- It has a special move called {details[2]}\n\n-- {details[3]}\n\n_"
         st.text(text)
 
         audio_bytes = get_audio(text[:-1])
