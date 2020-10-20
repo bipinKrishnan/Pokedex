@@ -55,10 +55,6 @@ def get_audio(text):
 
 def get_url(name):
     name = name.replace(' ', '')
-    #u = ''.join(f'https://tenor.com/search/{name}-gifs')
-    #html = urllib.request.urlopen(u)
-        #soup = BeautifulSoup(html, 'html.parser')
-        #url = soup.find_all('img')[2].get('src')
     url = f'https://img.pokemondb.net/artwork/{name}.jpg'
         
     return url.lower()
