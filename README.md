@@ -12,7 +12,7 @@ You can play with the app by uploading a pokemon image [here](share.streamlit.io
 
 2. Now run the following command in the terminal
 
-```console
+```sh
 
    streamlit run streamlit_app.py
    
