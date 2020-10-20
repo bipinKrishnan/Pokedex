@@ -11,7 +11,7 @@ You can upload pokemon images by launching the app or interactively play with co
 #### I. Running the app locally
 1. Clone the repo by running the below command and change directory to the cloned repo
 
-       git clone https://github.com/bipinKrishnan/pokemon.git
+       git clone https://github.com/bipinKrishnan/pokedex.git
   
 1. Make sure that you have installed all the libraries specified in the [requirements.txt](https://github.com/bipinKrishnan/pokedex/blob/main/requirements.txt) file by running the following command
 
