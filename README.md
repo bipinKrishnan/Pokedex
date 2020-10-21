@@ -31,6 +31,6 @@ You can upload pokemon images by launching the app or interactively play with co
 * [targets.py](https://github.com/bipinKrishnan/Pokedex/blob/main/targets.py) - This file contains all the 166 pokemon names stored in a variable called target in the form of a python list.
 
 #### III. Pretrained weights
-* You can find the pretrained weights for the model [here](https://github.com/bipinKrishnan/Pokedex/tree/main/utils) or directly download the weights.
+* You can find the pretrained weights for the model [here](https://github.com/bipinKrishnan/Pokedex/releases) or directly download the weights.
 
-  [![app](https://img.shields.io/badge/download-weights-orange)](https://github.com/bipinKrishnan/Pokedex/raw/main/utils/model.pt)
+  [![app](https://img.shields.io/badge/download-weights-orange)](https://github.com/bipinKrishnan/Pokedex/releases/download/0.0.1/model.pt)
