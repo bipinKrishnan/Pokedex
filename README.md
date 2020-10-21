@@ -4,7 +4,7 @@
 
 This is a web app version similar to Pokédex(a device for getting details about a pokemon, found in the Pokémon cartoon series), built and deployed with [streamlit](https://www.streamlit.io/).
 
-You can upload pokemon images by launching the app or interactively play with code by lauching the notebook.
+You can upload pokemon images by launching the app or interactively play with code for training the model by lauching the notebook.
 
 [![app](https://img.shields.io/badge/launch-app-brightgreen)](https://share.streamlit.io/bipinkrishnan/pokedex/main)  [![notebook](https://img.shields.io/badge/launch-notebook-blue)](https://www.kaggle.com/bipinkrishnan/pokemon-image-classification-with-efficientnet)
 
